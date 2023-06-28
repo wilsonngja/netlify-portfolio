@@ -73,7 +73,6 @@ const AboutMe = () => {
               borderWidth="4px"
               borderStyle="solid"
               borderColor="orange.200"
-              height="100%"
             />
           </GridItem>
           <GridItem>
