@@ -354,6 +354,39 @@ const AboutMe = () => {
           >
             PostgreSQL
           </Tag>
+          <Tag
+            size="lg"
+            variant="solid"
+            color="black"
+            marginX={4}
+            marginY={3}
+            bgColor="purple.300"
+            fontWeight="semibold"
+          >
+            Git
+          </Tag>
+          <Tag
+            size="lg"
+            variant="solid"
+            color="black"
+            marginX={4}
+            marginY={3}
+            bgColor="purple.300"
+            fontWeight="semibold"
+          >
+            TailwindCSS
+          </Tag>
+          <Tag
+            size="lg"
+            variant="solid"
+            color="black"
+            marginX={4}
+            marginY={3}
+            bgColor="purple.300"
+            fontWeight="semibold"
+          >
+            Bootstrap
+          </Tag>
         </Box>
       </GridItem>
     </Grid>
