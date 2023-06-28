@@ -73,6 +73,8 @@ const AboutMe = () => {
               borderWidth="4px"
               borderStyle="solid"
               borderColor="orange.200"
+              height={isSmallScreen ? "50%" : "auto"}
+              width={isSmallScreen ? "50%" : "auto"}
             />
           </GridItem>
           <GridItem>
