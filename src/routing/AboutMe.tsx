@@ -66,7 +66,7 @@ const AboutMe = () => {
       {/* Side Panel */}
       <GridItem>
         <Grid templateColumns="repeat(1, 1fr)">
-          if (isSmallScreen){" "}
+          if (isSmallScreen)
           {
             <Image
               src={profilePicture}
@@ -76,8 +76,8 @@ const AboutMe = () => {
               borderColor="orange.200"
               boxSize="100px"
             />
-          }{" "}
-          else{" "}
+          }
+          else
           {
             <GridItem colSpan={1}>
               <Image
