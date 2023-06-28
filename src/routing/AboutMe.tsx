@@ -47,7 +47,7 @@ const AboutMe = () => {
 
   const handleDownload = () => {
     const fileUrl =
-      "https://drive.google.com/uc?export=download&id=1_2WUzJwCBIUJrQ_u_3joDPpwdRP-MvKX"; // Replace with the actual local file path
+      "https://drive.google.com/uc?export=download&id=1_2WUzJwCBIUJrQ_u_3joDPpwdRP-MvKX";
 
     const link = document.createElement("a");
     link.href = fileUrl;
@@ -62,7 +62,6 @@ const AboutMe = () => {
       templateColumns={isSmallScreen ? "repeat(1, 1fr)" : "repeat(6, 1fr)"}
       paddingX={4}
       paddingY={4}
-      gap={3}
     >
       {/* Side Panel */}
       <GridItem>
