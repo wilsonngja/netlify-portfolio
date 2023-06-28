@@ -75,6 +75,8 @@ const AboutMe = () => {
               borderColor="orange.200"
               height={isSmallScreen ? "10%" : "auto"}
               width="auto"
+              marginY="0px"
+              marginX="auto"
             />
           </GridItem>
           <GridItem>
