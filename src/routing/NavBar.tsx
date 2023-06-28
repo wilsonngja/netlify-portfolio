@@ -16,7 +16,7 @@ const NavBar = () => {
       <Link to="/">
         <Image
           src={logo}
-          boxSize={isSmallScreen ? "30px" : "40px"}
+          boxSize={isSmallScreen ? "40px" : "50px"}
           _hover={{ content: `url(${logo2})` }}
         />
       </Link>

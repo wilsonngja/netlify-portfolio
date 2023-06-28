@@ -41,6 +41,11 @@ const IntroductionText = () => {
     fontWeight: "semibold",
   };
 
+  const MyStyle2: React.CSSProperties = {
+    fontWeight: "normal",
+    fontFamily: "monospace",
+  };
+
   return (
     <>
       {isSmallScreen ? (
@@ -108,6 +113,7 @@ const IntroductionText = () => {
               typeSpeed={50}
               backSpeed={60}
               loop
+              style={MyStyle2}
             />
           </Text>
         </HStack>
