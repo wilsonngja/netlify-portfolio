@@ -66,16 +66,30 @@ const AboutMe = () => {
       {/* Side Panel */}
       <GridItem>
         <Grid templateColumns="repeat(1, 1fr)">
-          <GridItem colSpan={1}>
+          if (isSmallScreen){" "}
+          {
             <Image
               src={profilePicture}
               borderRadius="full"
               borderWidth="4px"
               borderStyle="solid"
               borderColor="orange.200"
-              boxSize={isSmallScreen ? "100px" : "220px"}
+              boxSize="100px"
             />
-          </GridItem>
+          }{" "}
+          else{" "}
+          {
+            <GridItem colSpan={1}>
+              <Image
+                src={profilePicture}
+                borderRadius="full"
+                borderWidth="4px"
+                borderStyle="solid"
+                borderColor="orange.200"
+                boxSize="220px"
+              />
+            </GridItem>
+          }
           <GridItem>
             <Text fontSize="2xl" paddingTop={4} fontWeight="semibold">
               Wilson NG Jing An
@@ -86,7 +100,6 @@ const AboutMe = () => {
               @wilsonngja
             </Text>
           </GridItem>
-
           <GridItem paddingTop={4}>
             <Text fontSize="lg">
               NUS Computer Engg <Icon as={RiComputerFill} />
@@ -99,7 +112,6 @@ const AboutMe = () => {
             </Text>
             <Divider paddingTop={3} />
           </GridItem>
-
           <GridItem paddingTop={4}>
             <HStack>
               <Icon as={AiFillGithub} fontSize="lg" />
