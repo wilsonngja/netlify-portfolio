@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "./HomePage";
+import HomePage from "./HomePage/HomePage";
 import AboutMe from "./AboutMe/AboutMe";
-import Education from "./Education";
-import WorkExperience from "./WorkExperience";
-import Achievements from "./Achievements";
+import Education from "./Education/Education";
+import WorkExperience from "./WorkExperience/WorkExperience";
+import Achievements from "./Achievements/Achievements";
 import Layout from "./Layout";
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 
 const router = createBrowserRouter([
   {

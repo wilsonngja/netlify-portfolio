@@ -1,7 +1,7 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import IntroductionText from "./IntroductionText";
-import SelectorList from "./SelectorList";
-import HeadingText from "./HeadingText";
+import SelectorList from "../SelectorList";
+import HeadingText from "../HeadingText";
 
 function HomePage() {
   return (

@@ -200,12 +200,7 @@ const AboutMe = () => {
   } else if (isMediumScreen) {
     return (
       <Box paddingX={5}>
-        <Grid
-          templateColumns="repeat(3, 1fr)"
-          padding={4}
-          alignContent="center"
-          justifyItems="center"
-        >
+        <Grid templateColumns="repeat(3, 1fr)" padding={4}>
           <GridItem colSpan={1}>
             <Image
               src={profilePicture}
