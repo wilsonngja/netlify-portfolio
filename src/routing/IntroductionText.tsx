@@ -119,30 +119,6 @@ const IntroductionText = () => {
         </HStack>
       ) : null}
     </>
-
-    // <div>
-    //   <HStack fontSize={["md", "1.25rem", "3xl", "5xl"]}>
-    //     <Text paddingRight={[2, 2, 3, 4]}>Hello! I'm </Text>
-    //     <Text
-    //       color={color[colorMode]}
-    //       fontWeight={["medium", "medium", "bold", "bold"]}
-    //     >
-    //       <Typed
-    //         strings={[
-    //           " Wilson Ng",
-    //           " a BCI Engineering Intern",
-    //           " a Table Tennis Player",
-    //           " a Fullstack Developer",
-    //           " a Computer Engineer",
-    //         ]}
-    //         typeSpeed={50}
-    //         backSpeed={60}
-    //         loop
-    //       />
-    //     </Text>
-    //    </HStack>
-    //   <br />
-    // </div>
   );
 };
 

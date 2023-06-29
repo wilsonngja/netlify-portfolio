@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "./HomePage";
-import AboutMe from "./AboutMe";
+import AboutMe from "./AboutMe/AboutMe";
 import Education from "./Education";
 import WorkExperience from "./WorkExperience";
 import Achievements from "./Achievements";
