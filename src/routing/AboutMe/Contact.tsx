@@ -22,7 +22,7 @@ const Contact = () => {
     "2xl": false,
   });
 
-  const [isMidSmallScreen] = useMediaQuery(["(max-width: 768px)"]);
+  const [isMidSmallScreen] = useMediaQuery("(max-width: 767px)");
 
   const handleDownload = () => {
     const fileUrl =
@@ -113,7 +113,7 @@ const Contact = () => {
         </HStack>
       </>
     );
-  } else if (isSmallScreen && isMidSmallScreen) {
+  } else if (isMidSmallScreen) {
     return (
       <VStack align="center">
         <HStack paddingTop={2}>
@@ -153,7 +153,7 @@ const Contact = () => {
   } else {
     return (
       <>
-        <HStack paddingBottom={2}>
+        <HStack paddingBottom={2} justifyContent="left" alignItems="left">
           <Icon
             as={AiFillGithub}
             fontSize={{ base: "lg", sm: "lg", md: "lg", lg: "xl", xl: "2xl" }}
