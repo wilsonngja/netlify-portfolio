@@ -1,52 +1,36 @@
-import { Box, HStack, Grid, GridItem } from "@chakra-ui/react";
-import { useState } from "react";
-import ITEImage from "./ITE/ITEImage";
-import SPImage from "./SPImage";
-import NUSImage from "./NUSImage";
-import ITEPage from "./ITE/ITEPage";
-import SPPage from "./SPPage";
-import NUSPage from "./NUSPage";
+import { Grid, GridItem } from "@chakra-ui/react";
+import EducationTitle from "./EducationTitle";
+import Programming from "./Programming";
+import SoftwareEngineering from "./SoftwareEngineering";
+import MachineLearning from "./MachineLearning";
+import CompSysAndNetwork from "./CompSysAndNetwork";
+import DigitalDesign from "./Engineering";
+import Others from "./Others";
 
 const Education = () => {
-  const [title, setTitle] = useState("Initial Title");
-
-  const handleImageClick = (newTitle: string) => {
-    setTitle(newTitle);
-
-    setTimeout(() => {
-      setTitle(newTitle);
-    }, 1000);
-  };
-
   return (
-    <Grid
-      templateColumns="repeat(12, 1fr)"
-      templateRows="repeat(12, 1fr)"
-      flex="1"
-    >
-      <GridItem rowSpan={1} colSpan={12}>
-        <HStack paddingBottom={3} marginBottom={3}>
-          <ITEImage title="ITE" onClick={handleImageClick} />
-          <SPImage title="SP" onClick={handleImageClick} />
-          <NUSImage title="NUS" onClick={handleImageClick} />
-        </HStack>
+    <Grid templateColumns="repeat(2, 1fr)" flex="1" paddingX={6}>
+      <GridItem colSpan={2} paddingBottom={10}>
+        <EducationTitle />
       </GridItem>
-      <GridItem colSpan={12} rowSpan={10} paddingLeft={5}>
-        <Box>
-          {title === "ITE" ? (
-            <ITEPage />
-          ) : title === "SP" ? (
-            <SPPage />
-          ) : title === "NUS" ? (
-            <NUSPage />
-          ) : null}
-        </Box>
+      <GridItem paddingBottom={10}>
+        <Programming />
       </GridItem>
-
-      {/* <HStack justify="flex-start">
-        <Box paddingX={6} display="flex" alignItems="left"></Box>
-        <VStack display="flex" alignSelf="flex-start"></VStack>
-      </HStack> */}
+      <GridItem paddingBottom={10}>
+        <SoftwareEngineering />
+      </GridItem>
+      <GridItem paddingBottom={10}>
+        <MachineLearning />
+      </GridItem>
+      <GridItem paddingBottom={10}>
+        <CompSysAndNetwork />
+      </GridItem>
+      <GridItem paddingBottom={10}>
+        <DigitalDesign />
+      </GridItem>
+      <GridItem paddingBottom={10}>
+        <Others />
+      </GridItem>
     </Grid>
   );
 };
