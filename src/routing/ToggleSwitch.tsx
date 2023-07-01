@@ -5,12 +5,18 @@ import {
   useBreakpointValue,
   useColorMode,
 } from "@chakra-ui/react";
-import { BsFillMoonFill } from "react-icons/bs";
-import { BsFillSunFill } from "react-icons/bs";
+import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 
 const ToggleSwitch = () => {
   const { toggleColorMode, colorMode } = useColorMode();
-  const isSmallScreen = useBreakpointValue({ base: true, sm: true, md: false });
+  const isSmallScreen = useBreakpointValue({
+    base: true,
+    sm: true,
+    md: false,
+    lg: false,
+    xl: false,
+    "2xl": false,
+  });
 
   return (
     <HStack onClick={toggleColorMode}>
@@ -22,7 +28,7 @@ const ToggleSwitch = () => {
       > */}
       <Icon
         as={colorMode === "dark" ? BsFillMoonFill : BsFillSunFill}
-        boxSize={isSmallScreen ? "17px" : "22px"}
+        boxSize={isSmallScreen ? "20px" : "25px"}
         color={colorMode === "dark" ? "yellow.300" : "orange.400"}
       />
       {/* </Switch> */}
@@ -30,9 +36,7 @@ const ToggleSwitch = () => {
         fontSize={isSmallScreen ? "xs" : "lg"}
         fontWeight="semibold"
         color={colorMode === "dark" ? "yellow.300" : "orange.400"}
-      >
-        {colorMode === "dark" ? "Dark" : "Light"}
-      </Text>
+      ></Text>
     </HStack>
   );
 };
