@@ -1,4 +1,3 @@
-import Typed from "react-typed";
 import {
   HStack,
   Text,
@@ -6,6 +5,7 @@ import {
   useColorMode,
   useMediaQuery,
 } from "@chakra-ui/react";
+import Typed from "react-typed";
 
 const IntroductionText = () => {
   const isSmallScreen = useBreakpointValue({

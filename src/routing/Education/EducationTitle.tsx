@@ -16,7 +16,7 @@ const EducationTitle = () => {
   };
 
   return (
-    <Box display="flex" alignSelf="flex-start">
+    <Box display="flex" alignSelf="flex-start" paddingX={3} paddingBottom={10}>
       <Text
         fontSize={{
           base: "1.375rem",

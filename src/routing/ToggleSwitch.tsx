@@ -27,9 +27,9 @@ const ToggleSwitch = () => {
         size={isSmallScreen ? "sm" : "md"}
       > */}
       <Icon
-        as={colorMode === "dark" ? BsFillMoonFill : BsFillSunFill}
+        as={colorMode === "light" ? BsFillMoonFill : BsFillSunFill}
         boxSize={isSmallScreen ? "20px" : "25px"}
-        color={colorMode === "dark" ? "yellow.300" : "orange.400"}
+        color={colorMode === "dark" ? "orange.300" : "purple.500"}
       />
       {/* </Switch> */}
       <Text
