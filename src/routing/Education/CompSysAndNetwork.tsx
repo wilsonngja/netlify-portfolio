@@ -6,14 +6,11 @@ import {
   AccordionPanel,
   Badge,
   Icon,
-  ListItem,
   Stack,
   Text,
-  UnorderedList,
   useColorMode,
 } from "@chakra-ui/react";
-import { AiFillFolderOpen, AiFillFolder } from "react-icons/ai";
-import { LuBrainCircuit } from "react-icons/lu";
+import { AiFillFolder, AiFillFolderOpen } from "react-icons/ai";
 import { HiDesktopComputer } from "react-icons/hi";
 
 const CompSysAndNetwork = () => {

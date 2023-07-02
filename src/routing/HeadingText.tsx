@@ -1,5 +1,4 @@
 import { Box, Text } from "@chakra-ui/react";
-import Control from "./HomePage/Control";
 
 const HeadingText = () => {
   return (

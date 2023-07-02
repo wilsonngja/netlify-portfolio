@@ -1,4 +1,10 @@
-import { Box, useColorMode, Text, useBreakpointValue } from "@chakra-ui/react";
+import {
+  Box,
+  useColorMode,
+  Text,
+  useBreakpointValue,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import React from "react";
 import Typed from "react-typed";
 
@@ -11,6 +17,8 @@ const WorkExperienceTitle = () => {
     xl: false,
     "2xl": false,
   });
+
+  const [isVerySmallScreen] = useMediaQuery("(max-width: 400px)");
 
   const { colorMode } = useColorMode();
 
@@ -33,14 +41,18 @@ const WorkExperienceTitle = () => {
       paddingBottom={5}
     >
       <Text
-        fontSize={{
-          base: "1.375rem",
-          sm: "3xl",
-          md: "3xl",
-          lg: "3xl",
-          xl: "3xl",
-          "2xl": "4xl",
-        }}
+        fontSize={
+          isVerySmallScreen
+            ? "1.175rem"
+            : {
+                base: "1.5rem",
+                sm: "3xl",
+                md: "3xl",
+                lg: "3xl",
+                xl: "3xl",
+                "2xl": "4xl",
+              }
+        }
       >
         <Typed
           strings={["./wilson_ng/experience"]}

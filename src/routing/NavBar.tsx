@@ -1,8 +1,8 @@
 import { Divider, HStack, Image, useBreakpointValue } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import logo from "../assets/avatar_logo.png";
 import logo2 from "../assets/avatar_logo2.png";
 import ToggleSwitch from "./ToggleSwitch";
-import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const isSmallScreen = useBreakpointValue({
@@ -10,15 +10,6 @@ const NavBar = () => {
     sm: true,
     md: false,
     lg: false,
-    xl: false,
-    "2xl": false,
-  });
-
-  const isLargeScreen = useBreakpointValue({
-    base: false,
-    sm: false,
-    md: false,
-    lg: true,
     xl: false,
     "2xl": false,
   });
