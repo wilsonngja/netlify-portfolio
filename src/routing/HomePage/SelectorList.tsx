@@ -1,5 +1,5 @@
 import { List, ListItem, useColorMode } from "@chakra-ui/react";
-import BlinkingUnderscore from "./BlinkingUnderscore";
+import BlinkingUnderscore from "../BlinkingUnderscore";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -64,7 +64,6 @@ const SelectorList = () => {
   return (
     <List
       className="list-group"
-      fontSize="4xl"
       style={{ display: "inline-block", maxWidth: "fit-content" }}
     >
       {items.map((item, index) => (
@@ -79,8 +78,16 @@ const SelectorList = () => {
                 : colorInactive[colorMode]
             }
             _hover={{ color: color[colorMode][index], fontWeight: "semibold" }}
-            fontWeight={items[count] === item ? "semibold" : "normal"}
-            fontSize={["lg", "2xl", "3xl", "3xl"]}
+            fontWeight="normal"
+            fontSize={{
+              base: "2xl",
+              sm: "3xl",
+              md: "3xl",
+              lg: "2xl",
+              xl: "3xl",
+              "2xl": "3xl",
+            }}
+            fontFamily="monospace"
           >
             {items[count] === item ? "> " : "  "}
             {item} {items[count] === item ? <BlinkingUnderscore /> : ""}

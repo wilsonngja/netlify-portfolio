@@ -84,10 +84,10 @@ const IntroductionText = () => {
     <>
       {isSmallScreen ? (
         <>
-          <Text paddingRight={2} fontSize={"xl"}>
+          <Text paddingRight={2} fontSize={"2xl"}>
             {"Hello! I'm"}
           </Text>
-          <Text as="b" color={color[colorMode]} fontSize={"xl"} height={2}>
+          <Text as="b" color={color[colorMode]} fontSize={"2xl"} height={2}>
             <Typed
               strings={introduction}
               typeSpeed={50}

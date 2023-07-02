@@ -39,7 +39,7 @@ const DigitalDesign = () => {
         <ListItem
           paddingLeft={{ base: 0, sm: 0, md: 4, lg: 0, xl: 4, "2xl": 4 }}
           fontSize={{
-            base: "md",
+            base: "sm",
             sm: "md",
             md: "lg",
             lg: "md",
@@ -58,7 +58,7 @@ const DigitalDesign = () => {
         <ListItem
           paddingLeft={{ base: 0, sm: 0, md: 4, lg: 0, xl: 4, "2xl": 4 }}
           fontSize={{
-            base: "md",
+            base: "sm",
             sm: "md",
             md: "lg",
             lg: "md",
@@ -77,7 +77,7 @@ const DigitalDesign = () => {
         <ListItem
           paddingLeft={{ base: 0, sm: 0, md: 4, lg: 0, xl: 4, "2xl": 4 }}
           fontSize={{
-            base: "md",
+            base: "sm",
             sm: "md",
             md: "lg",
             lg: "md",
