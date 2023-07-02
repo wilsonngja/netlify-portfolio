@@ -14,40 +14,39 @@ const Education = () => {
       <Grid
         templateColumns="repeat(2, 1fr)"
         paddingX={{ base: 3, sm: 3, md: 3, lg: 4, xl: 5, "2xl": 6 }}
-        alignItems="center"
       >
         <GridItem
-          paddingBottom={10}
+          paddingBottom={2}
           colSpan={{ base: 2, sm: 2, md: 2, lg: 1, xl: 1, "2xl": 1 }}
         >
           <Programming />
         </GridItem>
         <GridItem
-          paddingBottom={10}
+          paddingBottom={2}
           colSpan={{ base: 2, sm: 2, md: 2, lg: 1, xl: 1, "2xl": 1 }}
         >
           <SoftwareEngineering />
         </GridItem>
         <GridItem
-          paddingBottom={10}
+          paddingBottom={2}
           colSpan={{ base: 2, sm: 2, md: 2, lg: 1, xl: 1, "2xl": 1 }}
         >
           <MachineLearning />
         </GridItem>
         <GridItem
-          paddingBottom={10}
+          paddingBottom={2}
           colSpan={{ base: 2, sm: 2, md: 2, lg: 1, xl: 1, "2xl": 1 }}
         >
           <CompSysAndNetwork />
         </GridItem>
         <GridItem
-          paddingBottom={10}
+          paddingBottom={2}
           colSpan={{ base: 2, sm: 2, md: 2, lg: 1, xl: 1, "2xl": 1 }}
         >
           <DigitalDesign />
         </GridItem>
         <GridItem
-          paddingBottom={10}
+          paddingBottom={2}
           colSpan={{ base: 2, sm: 2, md: 2, lg: 1, xl: 1, "2xl": 1 }}
         >
           <Others />

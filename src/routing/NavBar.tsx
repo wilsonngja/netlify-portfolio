@@ -14,6 +14,15 @@ const NavBar = () => {
     "2xl": false,
   });
 
+  const isLargeScreen = useBreakpointValue({
+    base: false,
+    sm: false,
+    md: false,
+    lg: true,
+    xl: false,
+    "2xl": false,
+  });
+
   return (
     <>
       <HStack justifyContent="space-between">

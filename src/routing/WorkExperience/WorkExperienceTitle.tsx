@@ -1,22 +1,37 @@
-import { Box, Text, useColorMode } from "@chakra-ui/react";
+import { Box, useColorMode, Text, useBreakpointValue } from "@chakra-ui/react";
+import React from "react";
 import Typed from "react-typed";
 
-const EducationTitle = () => {
+const WorkExperienceTitle = () => {
+  const isLargeScreen = useBreakpointValue({
+    base: false,
+    sm: false,
+    md: false,
+    lg: true,
+    xl: false,
+    "2xl": false,
+  });
+
   const { colorMode } = useColorMode();
 
-  const EducationTitleColor = {
+  const WorkTitle = {
     dark: "#B794F4",
     light: "#773fd9",
   };
 
   const headingStyle: React.CSSProperties = {
-    color: EducationTitleColor[colorMode],
+    color: WorkTitle[colorMode],
     fontFamily: "monospace",
     fontWeight: "bold",
   };
 
   return (
-    <Box display="flex" alignSelf="flex-start" paddingX={3} paddingBottom={5}>
+    <Box
+      display="flex"
+      alignSelf="flex-start"
+      paddingX={isLargeScreen ? 2 : 10}
+      paddingBottom={5}
+    >
       <Text
         fontSize={{
           base: "1.375rem",
@@ -28,7 +43,7 @@ const EducationTitle = () => {
         }}
       >
         <Typed
-          strings={["./wilson_ng/education"]}
+          strings={["./wilson_ng/experience"]}
           typeSpeed={50}
           style={headingStyle}
           cursorChar="_"
@@ -38,4 +53,4 @@ const EducationTitle = () => {
   );
 };
 
-export default EducationTitle;
+export default WorkExperienceTitle;

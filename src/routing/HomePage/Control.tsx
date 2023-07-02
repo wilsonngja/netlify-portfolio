@@ -15,14 +15,14 @@ const Control = () => {
 
   return (
     <Box
-      fontSize="xl"
+      fontSize="lg"
       color={colors[colorMode]}
       bgColor={backgroundColor[colorMode]}
       paddingX={2}
       paddingBottom={1}
       borderRadius="xl"
     >
-      Control with <Kbd>↑</Kbd> and <Kbd>↓</Kbd> arrow
+      Control with <Kbd>↑</Kbd> and <Kbd>↓</Kbd> arrow and <Kbd>Enter</Kbd> key
     </Box>
   );
 };
