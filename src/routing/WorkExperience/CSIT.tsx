@@ -1,25 +1,16 @@
 import {
-  Text,
-  Image,
   Card,
   CardBody,
-  Stack,
-  Heading,
   Divider,
   Flex,
+  HStack,
+  Heading,
+  Image,
+  Stack,
+  Text,
   useBreakpointValue,
   useColorMode,
   useMediaQuery,
-  HStack,
-  useDisclosure,
-  Button,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
 } from "@chakra-ui/react";
 import CSITInternshipPic from "../../assets/CSITInternship.jpg";
 import CSITInternshipTags from "./CSITInternshipTags";
@@ -36,7 +27,6 @@ const CSIT = () => {
 
   const { colorMode } = useColorMode();
   const [isVerySmallScreen] = useMediaQuery("(max-width: 400px)");
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const HeadingText = {
     dark: "teal.300",
@@ -61,7 +51,7 @@ const CSIT = () => {
   return (
     <>
       <Flex flex="1" borderRadius="md" paddingBottom={10}>
-        <Card maxW={isLargeScreen ? "xs" : "sm"} onClick={onOpen}>
+        <Card maxW={isLargeScreen ? "xs" : "sm"}>
           <CardBody>
             <Image src={CSITInternshipPic} borderRadius="lg" />
             <Stack marginTop={6} spacing={3}>
