@@ -76,7 +76,7 @@ const NaganoInternship = () => {
         >
           <CardBody>
             <Image src={NaganoInternshipPic} borderRadius="lg" />
-            <Stack marginTop={6} spacing={3}>
+            <Stack marginTop={5} spacing={3}>
               <Heading
                 fontSize={
                   isLargeScreen ? "lg" : isVerySmallScreen ? "0.85rem" : "xl"
@@ -102,13 +102,14 @@ const NaganoInternship = () => {
                   <Text
                     color={DescriptionText[colorMode]}
                     fontFamily="monospace"
-                    fontSize="0.95rem"
+                    fontSize="0.9rem"
                     letterSpacing="-0.005rem"
                   >
-                    This internship was done during the 6 weeks semester break
-                    in the 2nd year of polytechnic. The internship requires
-                    rendering assistance to student in the projects and requires
-                    knowledge in Java and Raspberry Pi.
+                    During the six-week semester break in my second year of
+                    polytechnic, I engaged in an internship that involved
+                    providing support to students working on projects. The
+                    internship specifically required proficiency in Java and
+                    Raspberry Pi.
                   </Text>
                 </>
               )}
@@ -140,6 +141,7 @@ const NaganoInternship = () => {
           xl: "xl",
           "2xl": "2xl",
         }}
+        motionPreset="slideInBottom"
       >
         {overlay}
         <ModalOverlay />
@@ -190,27 +192,28 @@ const NaganoInternship = () => {
             }}
             letterSpacing="-0.005rem"
           >
-            This internship was done during the 6 weeks semester break dated
-            back in my 2nd year of polytechnic. This overseas internship has
-            enabled me to broaden my prospect beyond the material from
-            textbooks, allowing me to learn development in other platforms such
-            as Raspberry Pi.
+            I participated in an internship during my six-week semester break in
+            my second year of polytechnic. This overseas internship provided me
+            with valuable opportunities to expand my knowledge beyond what I
+            learned from textbooks and allowed me to explore development on
+            different platforms, such as Raspberry Pi.
             <br />
             <br />
-            During the internship, I was tasked to assist in 2 different
-            projects. Firstly, I was able to render assistant in a Heat Stroke
-            Detection Robot project where i programmed a 3-axis compass to
-            provide accurate location in the form of latitude and longtitude.
-            The second project i helped in was a Surveillance Camera project
-            where i programmed a graphica user interface (GUI) to provide real
-            time visualisation from the cameras. Both projects are developed in
-            Java Language.
+            During the internship, I contributed to two distinct projects. In
+            the first project, I assisted with a Heat Stroke Detection Robot. My
+            responsibilities included programming a 3-axis compass to accurately
+            determine the robot's location in terms of latitude and longitude.
+            The second project involved a Surveillance Camera system where I
+            developed a graphical user interface (GUI) to provide real-time
+            visualization from the cameras. Both projects were implemented using
+            the Java programming language.
             <br />
             <br />
-            Due to the short nature of the internship and the communication
-            barrier, the achievement was limited. Nevertheless, it's still a
-            fulfilling journey and I'm glad to have embarked on this overseas
-            internship program.
+            Although the internship was relatively short, and there were some
+            communication barriers, I still found it to be a rewarding
+            experience. Despite the limitations, I am grateful for the journey
+            and the opportunity to participate in this overseas internship
+            program.
           </ModalBody>
 
           <ModalFooter>

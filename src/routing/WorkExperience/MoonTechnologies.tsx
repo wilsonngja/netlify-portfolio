@@ -1,4 +1,5 @@
 import {
+  Button,
   Card,
   CardBody,
   Divider,
@@ -6,14 +7,24 @@ import {
   HStack,
   Heading,
   Image,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   Stack,
   Text,
   useBreakpointValue,
   useColorMode,
+  useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
 import MoonInternshipTag from "./MoonInternshipTag";
 import ThinkAboutIt from "../../assets/Roll-Safe-Think-About-It.jpg";
+import { useState } from "react";
+import LoremIpsum from "react-lorem-ipsum";
 
 const MoonTechnologies = () => {
   const isLargeScreen = useBreakpointValue({
@@ -48,62 +59,148 @@ const MoonTechnologies = () => {
     light: "blue.700",
   };
 
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const OverlayOne = () => <ModalOverlay backdropFilter="blur(10px)" />;
+  const [overlay, setOverlay] = useState(<OverlayOne />);
   return (
-    <Flex flex="1" borderRadius="md" paddingBottom={10}>
-      <Card maxW={isLargeScreen ? "xs" : "sm"}>
-        <CardBody>
-          <Image src={ThinkAboutIt} borderRadius="lg" />
-          <Stack marginTop={6} spacing={3}>
-            <Heading
-              fontSize={
-                isLargeScreen ? "lg" : isVerySmallScreen ? "0.85rem" : "xl"
-              }
-              color={HeadingText[colorMode]}
-              fontFamily="monospace"
-            >
-              BCI Engineering Intern @<br />
-              Moon Technologies Pte Ltd
-            </Heading>
-            <Heading
-              fontSize={
-                isLargeScreen ? "sm" : isVerySmallScreen ? "0.8rem" : "md"
-              }
-              textTransform="uppercase"
-              color={DateText[colorMode]}
-              fontFamily="monospace"
-            >
-              June 2023 - August 2023
-            </Heading>
-            {isLargeScreen && (
-              <>
-                <Divider />
-                <Text
-                  color={DescriptionText[colorMode]}
-                  fontFamily="monospace"
-                  fontSize="0.95rem"
-                  letterSpacing="-0.005rem"
-                >
-                  This internship is still in progress, please stay tune for
-                  more updates.
-                </Text>
-              </>
-            )}
-          </Stack>
-          <Divider paddingY={2} />
-          <HStack paddingTop={4} align="flex-end">
+    <>
+      <Flex flex="1" borderRadius="md" paddingBottom={10}>
+        <Card
+          maxW={isLargeScreen ? "xs" : "sm"}
+          onClick={() => {
+            setOverlay(<OverlayOne />);
+            onOpen();
+          }}
+          cursor="pointer"
+        >
+          <CardBody>
+            <Image src={ThinkAboutIt} borderRadius="lg" />
+            <Stack marginTop={6} spacing={3}>
+              <Heading
+                fontSize={
+                  isLargeScreen ? "lg" : isVerySmallScreen ? "0.85rem" : "xl"
+                }
+                color={HeadingText[colorMode]}
+                fontFamily="monospace"
+              >
+                BCI Engineering Intern @<br />
+                Moon Technologies Pte Ltd
+              </Heading>
+              <Heading
+                fontSize={
+                  isLargeScreen ? "sm" : isVerySmallScreen ? "0.8rem" : "md"
+                }
+                textTransform="uppercase"
+                color={DateText[colorMode]}
+                fontFamily="monospace"
+              >
+                June 2023 - August 2023
+              </Heading>
+              {isLargeScreen && (
+                <>
+                  <Divider />
+                  <Text
+                    color={DescriptionText[colorMode]}
+                    fontFamily="monospace"
+                    fontSize="0.95rem"
+                    letterSpacing="-0.005rem"
+                  >
+                    This internship is still in progress, please stay tune for
+                    more updates.
+                  </Text>
+                </>
+              )}
+            </Stack>
+            <Divider paddingY={2} />
+            <HStack paddingTop={4} align="flex-end">
+              <Text
+                color={TagText[colorMode]}
+                fontFamily="monospace"
+                fontSize="0.95rem"
+                letterSpacing="-0.005rem"
+              >
+                Tags:
+              </Text>
+              <MoonInternshipTag />
+            </HStack>
+          </CardBody>
+        </Card>
+      </Flex>
+
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        size={{
+          base: "sm",
+          sm: "sm",
+          md: "md",
+          lg: "lg",
+          xl: "xl",
+          "2xl": "2xl",
+        }}
+        motionPreset="slideInBottom"
+      >
+        {overlay}
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader overflow="hidden">
+            <Image src={ThinkAboutIt} borderRadius="lg" />
             <Text
-              color={TagText[colorMode]}
+              fontSize={{
+                base: "sm",
+                sm: "sm",
+                md: "md",
+                lg: "lg",
+                xl: "xl",
+                "2xl": "2xl",
+              }}
               fontFamily="monospace"
-              fontSize="0.95rem"
-              letterSpacing="-0.005rem"
+              paddingTop={2}
+              color={HeadingText[colorMode]}
             >
-              Tags:
+              Embedded System Engineer @ Nagano College of Technology
             </Text>
-            <MoonInternshipTag />
-          </HStack>
-        </CardBody>
-      </Card>
-    </Flex>
+            <Text
+              fontSize={{
+                base: "xs",
+                sm: "xs",
+                md: "sm",
+                lg: "md",
+                xl: "lg",
+                "2xl": "lg",
+              }}
+              fontFamily="monospace"
+              color={DateText[colorMode]}
+            >
+              September 2017 - October 2017
+            </Text>
+          </ModalHeader>
+          <ModalCloseButton />
+          <ModalBody
+            color={DescriptionText[colorMode]}
+            fontFamily="monospace"
+            fontSize={{
+              base: "xs",
+              sm: "xs",
+              md: "sm",
+              lg: "0.9rem",
+              xl: "0.925rem",
+              "2xl": "0.95rem",
+            }}
+            letterSpacing="-0.005rem"
+          >
+            <LoremIpsum />
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={onClose}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
   );
 };
 
