@@ -1,10 +1,12 @@
-import { Box } from "@chakra-ui/react";
+import ProjectList from "./ProjectList";
+import ProjectTitle from "./ProjectTitle";
 
 const Projects = () => {
   return (
-    <Box paddingX={6} fontSize="2xl">
-      Projects
-    </Box>
+    <>
+      <ProjectTitle />
+      <ProjectList />
+    </>
   );
 };
 

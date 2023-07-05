@@ -79,7 +79,7 @@ const NaganoInternship = () => {
             <Stack marginTop={5} spacing={3}>
               <Heading
                 fontSize={
-                  isLargeScreen ? "lg" : isVerySmallScreen ? "0.85rem" : "xl"
+                  isLargeScreen ? "4xl" : isVerySmallScreen ? "0.85rem" : "xl"
                 }
                 color={HeadingText[colorMode]}
                 fontFamily="monospace"
