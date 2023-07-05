@@ -47,8 +47,8 @@ const MBotProject = () => {
         variant="outline"
         size="lg"
         maxW={{
-          base: "90%",
-          sm: "85%",
+          base: "100%",
+          sm: "100%",
           md: "100%",
           lg: "100%",
           xl: "80%",
