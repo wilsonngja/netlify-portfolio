@@ -8,28 +8,18 @@ import {
   GridItem,
   Heading,
   Icon,
-  Image,
   Link,
   Stack,
   Tag,
-  Text,
   useColorMode,
+  Text,
+  Image,
 } from "@chakra-ui/react";
-import mBot from "../../assets/mBot.jpg";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsYoutube } from "react-icons/bs";
+import PropertyRentalManagerImage from "../../assets/PropertyRentalManagerPhoto.jpg";
 
-const MBotProject = () => {
-  //   const [isVerySmallScreen] = useMediaQuery("(max-width: 400px)");
+const PropertyRentalManager = () => {
   const { colorMode } = useColorMode();
-
-  //   const isLargeScreen = useBreakpointValue({
-  //     base: false,
-  //     sm: false,
-  //     md: false,
-  //     lg: true,
-  //     xl: true,
-  //     "2xl": true,
-  //   });
 
   const HeadingText = {
     dark: "teal.300",
@@ -50,7 +40,6 @@ const MBotProject = () => {
     dark: "white",
     light: "gray.800",
   };
-
   return (
     <Flex alignItems="center" justify="center" minHeight="100%">
       <Card
@@ -70,7 +59,7 @@ const MBotProject = () => {
       >
         <Box>
           <Image
-            src={mBot}
+            src={PropertyRentalManagerImage}
             alt="Card Image"
             height="100%"
             width="100%"
@@ -93,9 +82,9 @@ const MBotProject = () => {
                   color={HeadingText[colorMode]}
                   fontFamily="monospace"
                 >
-                  mBot Robot Project{" "}
+                  Property Rental Manager{" "}
                   <Link
-                    href="https://github.com/cg1111a-gr7/mbot/tree/main"
+                    href="https://github.com/AY2223S1-CS2113-F11-1/tp"
                     isExternal
                   >
                     <Icon
@@ -120,34 +109,22 @@ const MBotProject = () => {
                   color={DateText[colorMode]}
                   fontFamily="monospace"
                 >
-                  August 2021 - November 2021
+                  August 2022 - November 2022
                 </Heading>
               </GridItem>
 
-              <GridItem
-                rowSpan={1}
-                colSpan={1}
-                paddingY={2}
-                justifyItems="left"
-              >
+              <GridItem rowSpan={1} colSpan={1} paddingY={2}>
                 <Tag
-                  bgColor="orange.300"
+                  bgColor="green.300"
                   color="black"
                   marginRight={4}
                   marginBottom={3}
                 >
-                  Arduino
+                  Java
                 </Tag>
-                <Tag
-                  bgColor="orange.300"
-                  color="black"
-                  marginRight={4}
-                  marginBottom={3}
-                >
-                  Hardware
-                </Tag>
-                <Tag bgColor="orange.300" color="black" marginBottom={3}>
-                  Bare Metal
+
+                <Tag bgColor="purple.300" color="black" marginBottom={3}>
+                  Git
                 </Tag>
               </GridItem>
             </Grid>
@@ -167,13 +144,12 @@ const MBotProject = () => {
               color={DescriptionText[colorMode]}
               paddingTop={3}
             >
-              A project done as part of the curriculum in the module of CG1111A:
-              Engineering Principles and Practice I. This module teaches the
-              fundamentals of engineering knowledge and provides ample
-              opportunity for circuit building and debugging. It has also allow
-              me to play with interesting sensors such as the ultrasonic and
-              colour sensor. At the end of this project, the robot was put to
-              test on a maze to navigate based on the different coloured tiles.
+              This project was done in a team of 5 as a Software Engineering
+              module (CS2113). Through this project, our understanding towards
+              SWE were enhanced. Our project was a CLI based application that
+              allows property managers to manage the lease of rooms. Therefore,
+              with added features such as Room Types and Tenants list, the job
+              of property managers is simplified.
             </Text>
           </CardBody>
         </Stack>
@@ -182,4 +158,4 @@ const MBotProject = () => {
   );
 };
 
-export default MBotProject;
+export default PropertyRentalManager;

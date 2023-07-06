@@ -8,29 +8,18 @@ import {
   GridItem,
   Heading,
   Icon,
-  Image,
   Link,
   Stack,
   Tag,
-  Text,
   useColorMode,
+  Text,
+  Image,
 } from "@chakra-ui/react";
-import mBot from "../../assets/mBot.jpg";
 import { BsGithub } from "react-icons/bs";
+import AlexBot from "../../assets/AlexBot.jpg";
 
-const MBotProject = () => {
-  //   const [isVerySmallScreen] = useMediaQuery("(max-width: 400px)");
+const AlexBotProject = () => {
   const { colorMode } = useColorMode();
-
-  //   const isLargeScreen = useBreakpointValue({
-  //     base: false,
-  //     sm: false,
-  //     md: false,
-  //     lg: true,
-  //     xl: true,
-  //     "2xl": true,
-  //   });
-
   const HeadingText = {
     dark: "teal.300",
     light: "blue.500",
@@ -69,13 +58,7 @@ const MBotProject = () => {
         borderWidth="1px"
       >
         <Box>
-          <Image
-            src={mBot}
-            alt="Card Image"
-            height="100%"
-            width="100%"
-            objectFit="cover"
-          />
+          <Image src={AlexBot} height="100%" width="100%" objectFit="cover" />
         </Box>
         <Stack>
           <CardBody justifyItems="center" alignItems="center">
@@ -93,9 +76,9 @@ const MBotProject = () => {
                   color={HeadingText[colorMode]}
                   fontFamily="monospace"
                 >
-                  mBot Robot Project{" "}
+                  AlexBot Project{" "}
                   <Link
-                    href="https://github.com/cg1111a-gr7/mbot/tree/main"
+                    href="https://github.com/cg2111a-project/cg2111a-project/tree/main"
                     isExternal
                   >
                     <Icon
@@ -120,16 +103,11 @@ const MBotProject = () => {
                   color={DateText[colorMode]}
                   fontFamily="monospace"
                 >
-                  August 2021 - November 2021
+                  January 2022 - April 2022
                 </Heading>
               </GridItem>
 
-              <GridItem
-                rowSpan={1}
-                colSpan={1}
-                paddingY={2}
-                justifyItems="left"
-              >
+              <GridItem rowSpan={1} colSpan={1} paddingY={2}>
                 <Tag
                   bgColor="orange.300"
                   color="black"
@@ -144,10 +122,26 @@ const MBotProject = () => {
                   marginRight={4}
                   marginBottom={3}
                 >
+                  Raspberry Pi
+                </Tag>
+                <Tag
+                  bgColor="orange.300"
+                  color="black"
+                  marginRight={4}
+                  marginBottom={3}
+                >
                   Hardware
                 </Tag>
-                <Tag bgColor="orange.300" color="black" marginBottom={3}>
+                <Tag
+                  bgColor="orange.300"
+                  color="black"
+                  marginRight={4}
+                  marginBottom={3}
+                >
                   Bare Metal
+                </Tag>
+                <Tag bgColor="green.300" color="black" marginBottom={3}>
+                  C++
                 </Tag>
               </GridItem>
             </Grid>
@@ -167,13 +161,12 @@ const MBotProject = () => {
               color={DescriptionText[colorMode]}
               paddingTop={3}
             >
-              A project done as part of the curriculum in the module of CG1111A:
-              Engineering Principles and Practice I. This module teaches the
-              fundamentals of engineering knowledge and provides ample
-              opportunity for circuit building and debugging. It has also allow
-              me to play with interesting sensors such as the ultrasonic and
-              colour sensor. At the end of this project, the robot was put to
-              test on a maze to navigate based on the different coloured tiles.
+              This project is done during a module: Engineering Principles and
+              Practice II where the scope of project extends towards large-scale
+              system. We are also allowed to play with components such as Lidar
+              and SLAM. During the evaluation, we were tasks to map out a maze
+              that was being mapped out. Although this project is of a higher
+              complexity, I was glad to experience technologies such as ROS.
             </Text>
           </CardBody>
         </Stack>
@@ -182,4 +175,4 @@ const MBotProject = () => {
   );
 };
 
-export default MBotProject;
+export default AlexBotProject;

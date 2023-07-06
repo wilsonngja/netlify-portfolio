@@ -6,6 +6,10 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import MBotProject from "./MBotProject";
+import AlexBotProject from "./AlexBotProject";
+import MeetUps from "./MeetUps";
+import PropertyRentalManager from "./PropertyRentalManager";
+import BermudaRectangle from "./BermudaRectangle";
 
 const ProjectList = () => {
   const isLargeScreen = useBreakpointValue({
@@ -18,13 +22,22 @@ const ProjectList = () => {
   });
 
   return (
-    <Box paddingX={isLargeScreen ? 2 : 10}>
+    <Box paddingX={isLargeScreen ? 2 : 10} paddingBottom={10}>
       <Center>
         <MBotProject />
       </Center>
-      <Flex paddingX={isLargeScreen ? 2 : 10}>
-        <GridItem justifyItems="center"></GridItem>
-      </Flex>
+      <Center marginTop={5}>
+        <AlexBotProject />
+      </Center>
+      <Center marginTop={5}>
+        <MeetUps />
+      </Center>
+      <Center marginTop={5}>
+        <PropertyRentalManager />
+      </Center>
+      <Center marginTop={5}>
+        <BermudaRectangle />
+      </Center>
     </Box>
   );
 };

@@ -15,21 +15,11 @@ import {
   Text,
   useColorMode,
 } from "@chakra-ui/react";
-import mBot from "../../assets/mBot.jpg";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsYoutube } from "react-icons/bs";
+import BermudaRectangeImage from "../../assets/BermudaRectangleImage.jpg";
 
-const MBotProject = () => {
-  //   const [isVerySmallScreen] = useMediaQuery("(max-width: 400px)");
+const BermudaRectangle = () => {
   const { colorMode } = useColorMode();
-
-  //   const isLargeScreen = useBreakpointValue({
-  //     base: false,
-  //     sm: false,
-  //     md: false,
-  //     lg: true,
-  //     xl: true,
-  //     "2xl": true,
-  //   });
 
   const HeadingText = {
     dark: "teal.300",
@@ -70,7 +60,7 @@ const MBotProject = () => {
       >
         <Box>
           <Image
-            src={mBot}
+            src={BermudaRectangeImage}
             alt="Card Image"
             height="100%"
             width="100%"
@@ -93,15 +83,26 @@ const MBotProject = () => {
                   color={HeadingText[colorMode]}
                   fontFamily="monospace"
                 >
-                  mBot Robot Project{" "}
+                  Bermuda Rectangle{" "}
                   <Link
-                    href="https://github.com/cg1111a-gr7/mbot/tree/main"
+                    href="https://github.com/AY2223-CG2271-Team-2/bermuda-rectangle"
                     isExternal
                   >
                     <Icon
                       as={BsGithub}
                       boxSize="22px"
                       _hover={{ color: GitHubHoverColor[colorMode] }}
+                    />
+                  </Link>
+                  <Link
+                    href="https://www.youtube.com/watch?v=CFpxFveyUfI&ab_channel=WilsonNg"
+                    isExternal
+                    marginLeft={3}
+                  >
+                    <Icon
+                      as={BsYoutube}
+                      boxSize="22px"
+                      _hover={{ color: "#c4302b" }}
                     />
                   </Link>
                 </Heading>
@@ -120,34 +121,31 @@ const MBotProject = () => {
                   color={DateText[colorMode]}
                   fontFamily="monospace"
                 >
-                  August 2021 - November 2021
+                  January 2023 - April 2023
                 </Heading>
               </GridItem>
 
-              <GridItem
-                rowSpan={1}
-                colSpan={1}
-                paddingY={2}
-                justifyItems="left"
-              >
+              <GridItem rowSpan={1} colSpan={1} paddingY={2}>
                 <Tag
                   bgColor="orange.300"
                   color="black"
                   marginRight={4}
                   marginBottom={3}
                 >
-                  Arduino
-                </Tag>
-                <Tag
-                  bgColor="orange.300"
-                  color="black"
-                  marginRight={4}
-                  marginBottom={3}
-                >
-                  Hardware
-                </Tag>
-                <Tag bgColor="orange.300" color="black" marginBottom={3}>
                   Bare Metal
+                </Tag>
+
+                <Tag
+                  bgColor="orange.300"
+                  color="black"
+                  marginRight={4}
+                  marginBottom={3}
+                >
+                  RTOS
+                </Tag>
+
+                <Tag bgColor="orange.300" color="black" marginBottom={3}>
+                  Hardware
                 </Tag>
               </GridItem>
             </Grid>
@@ -167,13 +165,13 @@ const MBotProject = () => {
               color={DescriptionText[colorMode]}
               paddingTop={3}
             >
-              A project done as part of the curriculum in the module of CG1111A:
-              Engineering Principles and Practice I. This module teaches the
-              fundamentals of engineering knowledge and provides ample
-              opportunity for circuit building and debugging. It has also allow
-              me to play with interesting sensors such as the ultrasonic and
-              colour sensor. At the end of this project, the robot was put to
-              test on a maze to navigate based on the different coloured tiles.
+              This project is a robot built with the skillset acquire from the
+              Real Time Operating System (CG2271) module. These skillset
+              includes in depth knowledge towards, Mutex, Semaphores and also
+              Message Queues. The robot was entitled "Bermuda Rectangle" as an
+              inside joke in the team due to the circuit failing to work after
+              putting through a rectangular hole. In all, this project has been
+              an enriching one.
             </Text>
           </CardBody>
         </Stack>
@@ -182,4 +180,4 @@ const MBotProject = () => {
   );
 };
 
-export default MBotProject;
+export default BermudaRectangle;

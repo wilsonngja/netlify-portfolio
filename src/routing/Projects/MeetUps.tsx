@@ -15,21 +15,11 @@ import {
   Text,
   useColorMode,
 } from "@chakra-ui/react";
-import mBot from "../../assets/mBot.jpg";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsYoutube } from "react-icons/bs";
+import MeetUpsImage from "../../assets/MeetUps.png";
 
-const MBotProject = () => {
-  //   const [isVerySmallScreen] = useMediaQuery("(max-width: 400px)");
+const MeetUps = () => {
   const { colorMode } = useColorMode();
-
-  //   const isLargeScreen = useBreakpointValue({
-  //     base: false,
-  //     sm: false,
-  //     md: false,
-  //     lg: true,
-  //     xl: true,
-  //     "2xl": true,
-  //   });
 
   const HeadingText = {
     dark: "teal.300",
@@ -70,7 +60,7 @@ const MBotProject = () => {
       >
         <Box>
           <Image
-            src={mBot}
+            src={MeetUpsImage}
             alt="Card Image"
             height="100%"
             width="100%"
@@ -93,15 +83,23 @@ const MBotProject = () => {
                   color={HeadingText[colorMode]}
                   fontFamily="monospace"
                 >
-                  mBot Robot Project{" "}
-                  <Link
-                    href="https://github.com/cg1111a-gr7/mbot/tree/main"
-                    isExternal
-                  >
+                  Project: MeetUps{" "}
+                  <Link href="https://github.com/wilsonngja/MeetUps" isExternal>
                     <Icon
                       as={BsGithub}
                       boxSize="22px"
                       _hover={{ color: GitHubHoverColor[colorMode] }}
+                    />
+                  </Link>
+                  <Link
+                    href="https://www.youtube.com/watch?v=b-SdLAV9xOE&ab_channel=WilsonNg"
+                    isExternal
+                    marginLeft={3}
+                  >
+                    <Icon
+                      as={BsYoutube}
+                      boxSize="22px"
+                      _hover={{ color: "#c4302b" }}
                     />
                   </Link>
                 </Heading>
@@ -120,34 +118,53 @@ const MBotProject = () => {
                   color={DateText[colorMode]}
                   fontFamily="monospace"
                 >
-                  August 2021 - November 2021
+                  May 2022 - July 2022
                 </Heading>
               </GridItem>
 
-              <GridItem
-                rowSpan={1}
-                colSpan={1}
-                paddingY={2}
-                justifyItems="left"
-              >
+              <GridItem rowSpan={1} colSpan={1} paddingY={2}>
                 <Tag
-                  bgColor="orange.300"
+                  bgColor="cyan.300"
                   color="black"
                   marginRight={4}
                   marginBottom={3}
                 >
-                  Arduino
+                  Javascript
                 </Tag>
                 <Tag
-                  bgColor="orange.300"
+                  bgColor="cyan.300"
                   color="black"
                   marginRight={4}
                   marginBottom={3}
                 >
-                  Hardware
+                  HTML
                 </Tag>
-                <Tag bgColor="orange.300" color="black" marginBottom={3}>
-                  Bare Metal
+                <Tag
+                  bgColor="cyan.300"
+                  color="black"
+                  marginRight={4}
+                  marginBottom={3}
+                >
+                  CSS
+                </Tag>
+                <Tag
+                  bgColor="cyan.300"
+                  color="black"
+                  marginRight={4}
+                  marginBottom={3}
+                >
+                  Svelte
+                </Tag>
+                <Tag
+                  bgColor="pink.300"
+                  color="black"
+                  marginRight={4}
+                  marginBottom={3}
+                >
+                  MongoDB
+                </Tag>
+                <Tag bgColor="purple.300" color="black" marginBottom={3}>
+                  TailwindCSS
                 </Tag>
               </GridItem>
             </Grid>
@@ -167,13 +184,16 @@ const MBotProject = () => {
               color={DescriptionText[colorMode]}
               paddingTop={3}
             >
-              A project done as part of the curriculum in the module of CG1111A:
-              Engineering Principles and Practice I. This module teaches the
-              fundamentals of engineering knowledge and provides ample
-              opportunity for circuit building and debugging. It has also allow
-              me to play with interesting sensors such as the ultrasonic and
-              colour sensor. At the end of this project, the robot was put to
-              test on a maze to navigate based on the different coloured tiles.
+              This utility project was done during the summer vacation in 2022.
+              As a pair, my partner and I developed this web application to
+              allow NUS students to fit their timetable to find a common
+              timeslot in the timetable. I played the role of a fullstack
+              developer in this project and assisted in developing backend
+              server as well as the development of frontend utility. With the
+              data acquired from NUSModsAPI, we are able to retrieve the modules
+              details for comparison. Eventually, more features such as venue
+              searching and availabilty were also added. This project helped us
+              tremendously towards software engineering.
             </Text>
           </CardBody>
         </Stack>
@@ -182,4 +202,4 @@ const MBotProject = () => {
   );
 };
 
-export default MBotProject;
+export default MeetUps;
