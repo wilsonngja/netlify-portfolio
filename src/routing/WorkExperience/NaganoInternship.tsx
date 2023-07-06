@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Card,
   CardBody,
@@ -22,10 +21,10 @@ import {
   useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
-import NaganoInternshipPic from "../../assets/NaganoInternshipPicture.jpg";
-import NaganoInternshipTags from "./NaganoInternshipTags";
-import NaganoModalPic from "../../assets/NaganoModalPic.jpg";
 import { useState } from "react";
+import NaganoInternshipPic from "../../assets/NaganoInternshipPicture.jpg";
+import NaganoModalPic from "../../assets/NaganoModalPic.jpg";
+import NaganoInternshipTags from "./NaganoInternshipTags";
 
 const NaganoInternship = () => {
   const isLargeScreen = useBreakpointValue({

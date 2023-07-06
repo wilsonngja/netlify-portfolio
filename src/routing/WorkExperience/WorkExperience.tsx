@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, useBreakpointValue } from "@chakra-ui/react";
+import { Grid, GridItem, useBreakpointValue } from "@chakra-ui/react";
 import CSIT from "./CSIT";
 import MoonTechnologies from "./MoonTechnologies";
 import NaganoInternship from "./NaganoInternship";

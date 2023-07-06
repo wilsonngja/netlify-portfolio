@@ -8,14 +8,14 @@ import {
   GridItem,
   Heading,
   Icon,
+  Image,
   Link,
   Stack,
   Tag,
-  useColorMode,
   Text,
-  Image,
+  useColorMode,
 } from "@chakra-ui/react";
-import { BsGithub, BsYoutube } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import PropertyRentalManagerImage from "../../assets/PropertyRentalManagerPhoto.jpg";
 
 const PropertyRentalManager = () => {

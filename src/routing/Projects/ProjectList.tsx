@@ -1,15 +1,9 @@
-import {
-  Box,
-  Center,
-  Flex,
-  GridItem,
-  useBreakpointValue,
-} from "@chakra-ui/react";
-import MBotProject from "./MBotProject";
+import { Box, Center, useBreakpointValue } from "@chakra-ui/react";
 import AlexBotProject from "./AlexBotProject";
+import BermudaRectangle from "./BermudaRectangle";
+import MBotProject from "./MBotProject";
 import MeetUps from "./MeetUps";
 import PropertyRentalManager from "./PropertyRentalManager";
-import BermudaRectangle from "./BermudaRectangle";
 
 const ProjectList = () => {
   const isLargeScreen = useBreakpointValue({
