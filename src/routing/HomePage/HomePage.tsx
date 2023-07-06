@@ -1,8 +1,9 @@
-import { Grid, GridItem, useBreakpointValue } from "@chakra-ui/react";
+import { Grid, GridItem, useBreakpointValue, useToast } from "@chakra-ui/react";
+import { useEffect } from "react";
 import HeadingText from "../HeadingText";
-import Control from "./Control";
 import IntroductionText from "./IntroductionText";
 import SelectorList from "./SelectorList";
+import { useLocation } from "react-router-dom";
 
 function HomePage() {
   const isLargeScreen = useBreakpointValue({
@@ -13,6 +14,25 @@ function HomePage() {
     xl: true,
     "2xl": true,
   });
+
+  const toast = useToast();
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScreenLoad = () => {
+      toast({
+        title: "Keyboard Control",
+        description: "Control with up and down arrow",
+        status: "info",
+        duration: 3000, // Toast duration in milliseconds
+        isClosable: true, // Enable close button
+      });
+    };
+
+    if (isLargeScreen) {
+      handleScreenLoad();
+    }
+  }, [location.pathname, toast]);
 
   return (
     <Grid
@@ -31,11 +51,6 @@ function HomePage() {
       <GridItem rowSpan={6}>
         <SelectorList />
       </GridItem>
-      {isLargeScreen && (
-        <GridItem colSpan={2} display="flex" justifyContent="flex-end">
-          <Control />
-        </GridItem>
-      )}
     </Grid>
   );
 }

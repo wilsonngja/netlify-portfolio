@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardBody,
@@ -79,7 +80,7 @@ const NaganoInternship = () => {
             <Stack marginTop={5} spacing={3}>
               <Heading
                 fontSize={
-                  isLargeScreen ? "4xl" : isVerySmallScreen ? "0.85rem" : "xl"
+                  isLargeScreen ? "lg" : isVerySmallScreen ? "0.85rem" : "xl"
                 }
                 color={HeadingText[colorMode]}
                 fontFamily="monospace"
