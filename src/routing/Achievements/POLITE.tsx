@@ -9,19 +9,19 @@ import {
   useColorMode,
   useMediaQuery,
 } from "@chakra-ui/react";
-import MSA_Image from "../../assets/MSA_Image.jpg";
-import MSA_Image2 from "../../assets/MSA_Image2.jpg";
-import MSA_Image3 from "../../assets/MSA_Image3.jpg";
 
 import { useEffect, useState } from "react";
+import POLITE1 from "../../assets/POLITE1.jpg";
+import POLITE2 from "../../assets/POLITE2.jpg";
+import POLITE3 from "../../assets/POLITE3.jpg";
 
-const ModelStudentAward = () => {
+const POLITE = () => {
   const { colorMode } = useColorMode();
   const [isVerySmallScreen] = useMediaQuery("(max-width: 400px)");
 
   const [currentImage, setCurrentImage] = useState(0);
 
-  const imageList = [MSA_Image, MSA_Image2, MSA_Image3];
+  const imageList = [POLITE1, POLITE2, POLITE3];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,6 +38,15 @@ const ModelStudentAward = () => {
     lg: true,
     xl: true,
     "2xl": true,
+  });
+
+  const isLargeScreen = useBreakpointValue({
+    base: false,
+    sm: false,
+    md: false,
+    lg: true,
+    xl: false,
+    "2xl": false,
   });
 
   const is2XLLargeScreen = useBreakpointValue({
@@ -64,15 +73,6 @@ const ModelStudentAward = () => {
     light: "green.500",
   };
 
-  const isLargeScreen = useBreakpointValue({
-    base: false,
-    sm: false,
-    md: false,
-    lg: true,
-    xl: false,
-    "2xl": false,
-  });
-
   return (
     <Card width="100%" height="100%">
       <CardHeader display="flex" justifyContent="center" paddingBottom={0}>
@@ -95,11 +95,11 @@ const ModelStudentAward = () => {
           fontFamily="monospace"
           fontWeight="semibold"
         >
-          Model Student Award
+          POL-ITE Games (Table Tennis): Gold Medal
         </Text>
         <Text
           fontSize={
-            isLargeScreenOnwards
+            isLargeScreen
               ? is2XLLargeScreen
                 ? "2xl"
                 : isLargeScreen
@@ -113,9 +113,9 @@ const ModelStudentAward = () => {
           fontFamily="monospace"
           fontWeight="semibold"
         >
-          (March 2019)
+          (October 2018)
         </Text>
-        {isLargeScreenOnwards && (
+        {isLargeScreen && (
           <>
             <Divider />
             <Text
@@ -125,13 +125,9 @@ const ModelStudentAward = () => {
               letterSpacing="-0.005rem"
               paddingTop={5}
             >
-              It's one of the highest accolades of SP which aims to recognise
-              the achievements and contributions of students in their
-              Co-Curricular Activities or Non-Academic Projects. The awards
-              affirm outstanding SP students who have shown efforts and made
-              significant contributions towards the vibrancy of SP. Recipients
-              of the awards are role-models who uphold the SP CORE values and
-              qualities of SP Graduate Attributes.
+              A table tennis compeition held annually across 5 different
+              polytechnics and ITE. I represented Singapore Polytechnic as a
+              vice captain.
             </Text>
           </>
         )}
@@ -140,4 +136,4 @@ const ModelStudentAward = () => {
   );
 };
 
-export default ModelStudentAward;
+export default POLITE;
