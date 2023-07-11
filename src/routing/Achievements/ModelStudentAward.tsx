@@ -5,9 +5,9 @@ import {
   Center,
   Divider,
   Heading,
-  Image,
   Stack,
   Text,
+  Image,
   useBreakpointValue,
   useColorMode,
   useMediaQuery,
@@ -27,44 +27,44 @@ const ModelStudentAward = () => {
   const [isVerySmallScreen] = useMediaQuery("(max-width: 400px)");
 
   const [currentImage, setCurrentImage] = useState(0);
-  const [images, setImages] = useState<string[]>([]);
+  // const [images, setImages] = useState<string[]>([]);
 
-  useEffect(() => {
-    const imagePaths = [
-      MSA_Image,
-      MSA_Image2,
-      MSA_Image3,
-      // Add more image imports as needed
-    ];
+  const imageList = [
+    MSA_Image,
+    MSA_Image2,
+    MSA_Image3,
+    // Add more image imports as needed
+  ];
 
-    const importedImages = imagePaths.map((path) => {
-      return import(path)
-        .then((module) => module.default)
-        .catch((error) => {
-          console.error("Error loading image:", error);
-          return null;
-        });
-    });
+  // useEffect(() => {
+  //   const importedImages = imagePaths.map((path) => {
+  //     return import(path)
+  //       .then((module) => module.default)
+  //       .catch((error) => {
+  //         console.error("Error loading image:", error);
+  //         return null;
+  //       });
+  //   });
 
-    Promise.all(importedImages)
-      .then((resolvedImages) => {
-        const filteredImages = resolvedImages.filter(
-          (image) => image !== null
-        ) as string[];
-        setImages(filteredImages);
-      })
-      .catch((error) => {
-        console.error("Error loading images:", error);
-      });
-  }, []);
+  //   Promise.all(importedImages)
+  //     .then((resolvedImages) => {
+  //       const filteredImages = resolvedImages.filter(
+  //         (image) => image !== null
+  //       ) as string[];
+  //       setImages(filteredImages);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error loading images:", error);
+  //     });
+  // }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+      setCurrentImage((prevImage) => (prevImage + 1) % imageList.length);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [images]);
+  }, [imageList]);
 
   const isLargeScreen = useBreakpointValue({
     base: false,
@@ -99,7 +99,13 @@ const ModelStudentAward = () => {
       <Card width="100%" height="100%" overflow="hidden">
         <CardBody>
           <Center>
-            <img src={images[currentImage]} alt="Card Image" />
+            <Image
+              src={imageList[currentImage]}
+              alt="Card Image"
+              objectFit="cover"
+              height="100%"
+              width="100%"
+            />
           </Center>
           <Stack marginTop={6} spacing={3}>
             <Heading
