@@ -1,19 +1,35 @@
 import {
+  Button,
   Card,
   CardBody,
   CardHeader,
   Divider,
   Image,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   Text,
   useBreakpointValue,
   useColorMode,
+  useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
+import { useState } from "react";
 import OrbitalApolloImage from "../../assets/OrbitalApollo.png";
 
 const OrbitalApollo = () => {
   const { colorMode } = useColorMode();
   const [isVerySmallScreen] = useMediaQuery("(max-width: 400px)");
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const OverlayOne = () => <ModalOverlay backdropFilter="blur(1px)" />;
+
+  const [overlay, setOverlay] = useState(<OverlayOne />);
 
   const isLargeScreenOnwards = useBreakpointValue({
     base: false,
@@ -57,66 +73,140 @@ const OrbitalApollo = () => {
     "2xl": false,
   });
 
+  const handleCardClick = () => {
+    if (!isLargeScreenOnwards) {
+      onOpen();
+    }
+  };
+
   return (
-    <Card width="100%" height="100%">
-      <CardHeader display="flex" justifyContent="center" paddingBottom={0}>
-        <Image src={OrbitalApolloImage} borderRadius="lg" />
-      </CardHeader>
-      <CardBody>
-        <Text
-          fontSize={
-            isLargeScreenOnwards
-              ? is2XLLargeScreen
-                ? "1.75rem"
-                : isLargeScreen
-                ? "2xl"
-                : "lg"
-              : isVerySmallScreen
-              ? "0.85rem"
-              : "xl"
-          }
-          color={HeadingText[colorMode]}
-          fontFamily="monospace"
-          fontWeight="semibold"
-        >
-          Orbital - Apollo 11 (Advanced)
-        </Text>
-        <Text
-          fontSize={
-            isLargeScreen
-              ? is2XLLargeScreen
-                ? "2xl"
-                : isLargeScreen
-                ? "xl"
-                : "md"
-              : isVerySmallScreen
-              ? "0.85rem"
-              : "xl"
-          }
-          color={SubHeadingText[colorMode]}
-          fontFamily="monospace"
-          fontWeight="semibold"
-        >
-          (August 2022)
-        </Text>
-        {isLargeScreenOnwards && (
-          <>
-            <Divider />
+    <>
+      <Card width="100%" height="100%" onClick={handleCardClick}>
+        <CardHeader display="flex" justifyContent="center" paddingBottom={0}>
+          <Image src={OrbitalApolloImage} borderRadius="lg" />
+        </CardHeader>
+        <CardBody>
+          <Text
+            fontSize={
+              isLargeScreenOnwards
+                ? is2XLLargeScreen
+                  ? "1.75rem"
+                  : isLargeScreen
+                  ? "2xl"
+                  : "lg"
+                : isVerySmallScreen
+                ? "0.85rem"
+                : "xl"
+            }
+            color={HeadingText[colorMode]}
+            fontFamily="monospace"
+            fontWeight="semibold"
+          >
+            Orbital - Apollo 11 (Advanced)
+          </Text>
+          <Text
+            fontSize={
+              isLargeScreen
+                ? is2XLLargeScreen
+                  ? "2xl"
+                  : isLargeScreen
+                  ? "xl"
+                  : "md"
+                : isVerySmallScreen
+                ? "0.85rem"
+                : "xl"
+            }
+            color={SubHeadingText[colorMode]}
+            fontFamily="monospace"
+            fontWeight="semibold"
+          >
+            (August 2022)
+          </Text>
+          {isLargeScreenOnwards && (
+            <>
+              <Divider />
+              <Text
+                color={DescriptionText[colorMode]}
+                fontFamily="monospace"
+                fontSize={{ lg: "md", xl: "sm", "2xl": "1.075rem" }}
+                letterSpacing="-0.005rem"
+                paddingTop={5}
+              >
+                Awarded to student that examplifies applications with good set
+                of core features and extensions while demostrating some effort
+                in following good software engineering practices and principles
+              </Text>
+            </>
+          )}
+        </CardBody>
+      </Card>
+
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        size={{
+          base: "sm",
+          sm: "sm",
+          md: "md",
+          lg: "lg",
+          xl: "xl",
+          "2xl": "2xl",
+        }}
+        motionPreset="slideInBottom"
+      >
+        {overlay}
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader overflow="hidden">
+            <Image src={OrbitalApolloImage} borderRadius="lg" />
             <Text
-              color={DescriptionText[colorMode]}
+              fontSize={{
+                base: "sm",
+                sm: "sm",
+                md: "xl",
+              }}
               fontFamily="monospace"
-              fontSize={{ lg: "md", xl: "sm", "2xl": "1.075rem" }}
-              letterSpacing="-0.005rem"
-              paddingTop={5}
+              paddingTop={2}
+              color={HeadingText[colorMode]}
             >
-              Awarded to student that examplifies applications with good set of
-              core features and extensions while demostrating some effort in
-              following good software engineering practices and principles
+              Orbital - Apollo 11 (Advanced)
             </Text>
-          </>
-        )}
-      </CardBody>
-    </Card>
+            <Text
+              fontSize={{
+                base: "xs",
+                sm: "xs",
+                md: "lg",
+              }}
+              fontFamily="monospace"
+              color={SubHeadingText[colorMode]}
+            >
+              August 2022
+            </Text>
+          </ModalHeader>
+          <ModalCloseButton />
+          <ModalBody
+            color={DescriptionText[colorMode]}
+            fontFamily="monospace"
+            fontSize={{
+              base: "xs",
+              sm: "xs",
+              md: "md",
+            }}
+            letterSpacing="-0.005rem"
+          >
+            Awarded to student that examplifies applications with good set of
+            core features and extensions while demostrating some effort in
+            following good software engineering practices and principles
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={onClose}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
   );
 };
 
