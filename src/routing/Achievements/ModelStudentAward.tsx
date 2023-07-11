@@ -12,13 +12,13 @@ import {
   useColorMode,
   useMediaQuery,
 } from "@chakra-ui/react";
-// import MSA_Image from "../../assets/MSA_Image.jpg";
-// import MSA_Image2 from "../../assets/MSA_Image2.jpg";
-// import MSA_Image3 from "../../assets/MSA_Image3.jpg";
+import MSA_Image from "../../assets/MSA_Image.jpg";
+import MSA_Image2 from "../../assets/MSA_Image2.jpg";
+import MSA_Image3 from "../../assets/MSA_Image3.jpg";
 // const MSA_Image = require("../../assets/MSA_Image.jpg").default;
 // const MSA_Image2 = require("../../assets/MSA_Image2.jpg").default;
 // const MSA_Image3 = require("../../assets/MSA_Image3.jpg").default;
-import { allImages } from "./Images";
+// import { allImages } from "./Images";
 
 import { useEffect, useState } from "react";
 
@@ -30,14 +30,12 @@ const ModelStudentAward = () => {
   const [images, setImages] = useState<string[]>([]);
 
   useEffect(() => {
-    // const imagePaths = [
-    //   MSA_Image,
-    //   MSA_Image2,
-    //   MSA_Image3,
-    //   // Add more image imports as needed
-    // ];
-
-    const imagePaths = Object.values(allImages);
+    const imagePaths = [
+      MSA_Image,
+      MSA_Image2,
+      MSA_Image3,
+      // Add more image imports as needed
+    ];
 
     const importedImages = imagePaths.map((path) => {
       return import(path)
@@ -101,11 +99,7 @@ const ModelStudentAward = () => {
       <Card width="100%" height="100%" overflow="hidden">
         <CardBody>
           <Center>
-            <Image
-              src={images[currentImage]}
-              alt="Card Image"
-              borderRadius="lg"
-            />
+            <img src={images[currentImage]} alt="Card Image" />
           </Center>
           <Stack marginTop={6} spacing={3}>
             <Heading
