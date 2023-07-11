@@ -18,7 +18,6 @@ import {
   useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
-import { useState } from "react";
 import OrbitalApolloImage from "../../assets/OrbitalApollo.png";
 
 const OrbitalApollo = () => {
@@ -26,10 +25,6 @@ const OrbitalApollo = () => {
   const [isVerySmallScreen] = useMediaQuery("(max-width: 400px)");
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const OverlayOne = () => <ModalOverlay backdropFilter="blur(1px)" />;
-
-  const [overlay, setOverlay] = useState(<OverlayOne />);
 
   const isLargeScreenOnwards = useBreakpointValue({
     base: false,
@@ -154,8 +149,7 @@ const OrbitalApollo = () => {
         }}
         motionPreset="slideInBottom"
       >
-        {overlay}
-        <ModalOverlay />
+        <ModalOverlay backdropFilter="blur(1px)" />
         <ModalContent>
           <ModalHeader overflow="hidden">
             <Image src={OrbitalApolloImage} borderRadius="lg" />

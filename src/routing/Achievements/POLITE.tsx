@@ -84,10 +84,6 @@ const POLITE = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const OverlayOne = () => <ModalOverlay backdropFilter="blur(1px)" />;
-
-  const [overlay, setOverlay] = useState(<OverlayOne />);
-
   const handleCardClick = () => {
     if (!isLargeScreenOnwards) {
       onOpen();
@@ -169,8 +165,7 @@ const POLITE = () => {
         }}
         motionPreset="slideInBottom"
       >
-        {overlay}
-        <ModalOverlay />
+        <ModalOverlay backdropFilter="blur(1px)" />
         <ModalContent>
           <ModalHeader overflow="hidden">
             <Image src={imageList[currentImage]} borderRadius="lg" />

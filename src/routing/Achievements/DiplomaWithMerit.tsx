@@ -18,7 +18,6 @@ import {
   useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
-import { useState } from "react";
 import DWM from "../../assets/DWM.jpg";
 
 const DiplomaWithMerit = () => {
@@ -68,10 +67,6 @@ const DiplomaWithMerit = () => {
   });
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const OverlayOne = () => <ModalOverlay backdropFilter="blur(1px)" />;
-
-  const [overlay, setOverlay] = useState(<OverlayOne />);
 
   const handleCardClick = () => {
     if (!isLargeScreenOnwards) {
@@ -153,8 +148,7 @@ const DiplomaWithMerit = () => {
         }}
         motionPreset="slideInBottom"
       >
-        {overlay}
-        <ModalOverlay />
+        <ModalOverlay backdropFilter="blur(1px)" />;
         <ModalContent>
           <ModalHeader overflow="hidden">
             <Image src={DWM} borderRadius="lg" />
