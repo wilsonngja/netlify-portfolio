@@ -40,7 +40,7 @@ const CSIT = () => {
   const [isVerySmallScreen] = useMediaQuery("(max-width: 400px)");
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const OverlayOne = () => <ModalOverlay backdropFilter="blur(10px)" />;
+  const OverlayOne = () => <ModalOverlay backdropFilter="blur(1px)" />;
 
   const [overlay, setOverlay] = useState(<OverlayOne />);
 
