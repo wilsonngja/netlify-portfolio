@@ -38,6 +38,7 @@ const AchievementTitle = () => {
     <Box
       display="flex"
       alignSelf="flex-start"
+      justifyContent="left"
       paddingX={isLargeScreen ? 2 : 10}
       paddingBottom={5}
     >
