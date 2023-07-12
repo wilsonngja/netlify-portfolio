@@ -19,6 +19,15 @@ const AchievementTitle = () => {
     "2xl": false,
   });
 
+  const isSmallScreen = useBreakpointValue({
+    base: true,
+    sm: true,
+    md: false,
+    lg: false,
+    xl: false,
+    "2xl": false,
+  });
+
   const [isVerySmallScreen] = useMediaQuery("(max-width: 400px)");
 
   const { colorMode } = useColorMode();
@@ -38,7 +47,7 @@ const AchievementTitle = () => {
     <Box
       display="flex"
       alignSelf="flex-start"
-      justifyContent="left"
+      justifyContent={isSmallScreen ? "center" : "left"}
       paddingX={isLargeScreen ? 2 : 10}
       paddingBottom={5}
     >
