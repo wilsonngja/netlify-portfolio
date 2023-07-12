@@ -133,7 +133,7 @@ const POLITE = () => {
           >
             (October 2018)
           </Text>
-          {isLargeScreen && (
+          {isLargeScreenOnwards && (
             <>
               <Divider />
               <Text
