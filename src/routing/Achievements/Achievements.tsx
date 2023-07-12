@@ -4,7 +4,7 @@ import AchievementList from "./AchievementList";
 
 const Achievements = () => {
   return (
-    <Box paddingX={6}>
+    <Box>
       <AchievementTitle />
       <AchievementList />
     </Box>
