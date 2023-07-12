@@ -175,8 +175,8 @@ const ModelStudentAward = () => {
             <Image src={imageList[currentImage]} borderRadius="lg" />
             <Text
               fontSize={{
-                base: "sm",
-                sm: "sm",
+                base: "md",
+                sm: "md",
                 md: "xl",
               }}
               fontFamily="monospace"
@@ -187,8 +187,8 @@ const ModelStudentAward = () => {
             </Text>
             <Text
               fontSize={{
-                base: "xs",
-                sm: "xs",
+                base: "0.95rem",
+                sm: "0.95rem",
                 md: "lg",
               }}
               fontFamily="monospace"
@@ -202,8 +202,8 @@ const ModelStudentAward = () => {
             color={DescriptionText[colorMode]}
             fontFamily="monospace"
             fontSize={{
-              base: "xs",
-              sm: "xs",
+              base: "sm",
+              sm: "sm",
               md: "md",
             }}
             letterSpacing="-0.005rem"

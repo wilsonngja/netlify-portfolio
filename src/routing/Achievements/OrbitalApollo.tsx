@@ -78,7 +78,7 @@ const OrbitalApollo = () => {
     <>
       <Card width="100%" height="100%" onClick={handleCardClick}>
         <CardHeader display="flex" justifyContent="center" paddingBottom={0}>
-          <Image src={OrbitalApolloImage} borderRadius="lg" />
+          <Image src={OrbitalApolloImage} borderRadius="lg" boxSize="275px" />
         </CardHeader>
         <CardBody>
           <Text
@@ -155,8 +155,8 @@ const OrbitalApollo = () => {
             <Image src={OrbitalApolloImage} borderRadius="lg" />
             <Text
               fontSize={{
-                base: "sm",
-                sm: "sm",
+                base: "md",
+                sm: "md",
                 md: "xl",
               }}
               fontFamily="monospace"
@@ -167,8 +167,8 @@ const OrbitalApollo = () => {
             </Text>
             <Text
               fontSize={{
-                base: "xs",
-                sm: "xs",
+                base: "0.95rem",
+                sm: "0.95rem",
                 md: "lg",
               }}
               fontFamily="monospace"
@@ -182,8 +182,8 @@ const OrbitalApollo = () => {
             color={DescriptionText[colorMode]}
             fontFamily="monospace"
             fontSize={{
-              base: "xs",
-              sm: "xs",
+              base: "sm",
+              sm: "sm",
               md: "md",
             }}
             letterSpacing="-0.005rem"
