@@ -6,6 +6,7 @@ import {
   Text,
   useBreakpointValue,
   VStack,
+  Center,
 } from "@chakra-ui/react";
 import { AiFillFilePdf, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
@@ -154,22 +155,25 @@ const Contact = () => {
     return (
       <>
         <HStack paddingBottom={2} justifyContent="left" alignItems="left">
-          <Icon
-            as={AiFillGithub}
-            fontSize={{ base: "lg", sm: "lg", md: "lg", lg: "xl", xl: "2xl" }}
-          />
-          <Link
-            href="https://github.com/wilsonngja"
-            isExternal
-            fontSize={{ md: "sm", lg: "md", xl: "lg", "2xl": "2xl" }}
-          >
-            @wilsonngja
-          </Link>
+          <Center>
+            <Icon
+              as={AiFillGithub}
+              fontSize={{ base: "lg", sm: "lg", md: "lg", lg: "xl", xl: "2xl" }}
+            />
+            <Link
+              href="https://github.com/wilsonngja"
+              isExternal
+              fontSize={{ md: "sm", lg: "md", xl: "lg", "2xl": "2xl" }}
+              paddingLeft={2}
+            >
+              @wilsonngja
+            </Link>
+          </Center>
         </HStack>
         <HStack paddingBottom={2}>
           <Icon
             as={FaTelegramPlane}
-            fontSize={{ md: "lg", lg: "xl", xl: "2xl" }}
+            fontSize={{ base: "lg", sm: "lg", md: "lg", lg: "xl", xl: "2xl" }}
           />
           <Text fontSize={{ md: "sm", lg: "md", xl: "lg", "2xl": "xl" }}>
             @wilsonngja

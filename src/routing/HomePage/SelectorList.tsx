@@ -24,11 +24,11 @@ const SelectorList = () => {
     "purple.300",
   ];
   const itemColorLight = [
-    "yellow.500",
-    "green.500",
-    "cyan.500",
-    "pink.500",
-    "purple.500",
+    "orange.600",
+    "green.600",
+    "cyan.600",
+    "pink.600",
+    "purple.600",
   ];
 
   const color = {
@@ -61,6 +61,8 @@ const SelectorList = () => {
     };
   }, [count]);
 
+  const listFontWeightUnhovered = colorMode === "dark" ? "medium" : "semibold";
+
   return (
     <List
       className="list-group"
@@ -77,8 +79,11 @@ const SelectorList = () => {
                 ? color[colorMode][index]
                 : colorInactive[colorMode]
             }
-            _hover={{ color: color[colorMode][index], fontWeight: "semibold" }}
-            fontWeight="normal"
+            _hover={{
+              color: color[colorMode][index],
+              fontWeight: "bold",
+            }}
+            fontWeight={listFontWeightUnhovered}
             fontSize={{
               base: "2xl",
               sm: "3xl",

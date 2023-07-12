@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardBody,
@@ -64,10 +65,9 @@ const NaganoInternship = () => {
   };
 
   return (
-    <>
+    <Box>
       <Flex flex="1" borderRadius="md" paddingBottom={10}>
         <Card
-          maxW={isLargeScreen ? "xs" : "sm"}
           onClick={() => {
             setOverlay(<OverlayOne />);
             onOpen();
@@ -223,7 +223,7 @@ const NaganoInternship = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </Box>
   );
 };
 

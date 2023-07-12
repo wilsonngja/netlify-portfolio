@@ -1,4 +1,4 @@
-import { Grid, GridItem, useBreakpointValue } from "@chakra-ui/react";
+import { Grid, GridItem, useBreakpointValue, Box } from "@chakra-ui/react";
 import CSIT from "./CSIT";
 import MoonTechnologies from "./MoonTechnologies";
 import NaganoInternship from "./NaganoInternship";
@@ -28,6 +28,7 @@ const WorkExperience = () => {
         }}
         paddingX={isLargeScreen ? 2 : 10}
         justifyItems="center"
+        gap={10}
       >
         <GridItem>
           <NaganoInternship />
@@ -36,7 +37,9 @@ const WorkExperience = () => {
           <CSIT />
         </GridItem>
         <GridItem>
-          <MoonTechnologies />
+          <Box>
+            <MoonTechnologies />
+          </Box>
         </GridItem>
       </Grid>
     </>

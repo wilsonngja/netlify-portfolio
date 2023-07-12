@@ -10,6 +10,7 @@ import {
   VStack,
   Center,
   useMediaQuery,
+  useColorMode,
 } from "@chakra-ui/react";
 import profilePicture from "../../assets/profilePicture.jpg";
 import Typed from "react-typed";
@@ -20,8 +21,15 @@ import Traits from "./Traits";
 import Contact from "./Contact";
 
 const AboutMe = () => {
+  const { colorMode } = useColorMode();
+
+  const AboutMeTitle = {
+    dark: "#B794F4",
+    light: "#773fd9",
+  };
+
   const headingStyle: React.CSSProperties = {
-    color: "#B794F4",
+    color: AboutMeTitle[colorMode],
     fontFamily: "monospace",
     fontWeight: "bold",
   };

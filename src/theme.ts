@@ -21,6 +21,8 @@ const scrollbar = extendTheme({
     },
   });
 
+  
+
 const theme = extendTheme(config, scrollbar);
 
 export default theme;

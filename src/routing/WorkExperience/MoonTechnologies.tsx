@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardBody,
@@ -21,10 +22,10 @@ import {
   useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
-import MoonInternshipTag from "./MoonInternshipTag";
-import ThinkAboutIt from "../../assets/Roll-Safe-Think-About-It.jpg";
 import { useState } from "react";
 import LoremIpsum from "react-lorem-ipsum";
+import ThinkAboutIt from "../../assets/Roll-Safe-Think-About-It.jpg";
+import MoonInternshipTag from "./MoonInternshipTag";
 
 const MoonTechnologies = () => {
   const isLargeScreen = useBreakpointValue({
@@ -64,15 +65,15 @@ const MoonTechnologies = () => {
   const OverlayOne = () => <ModalOverlay backdropFilter="blur(10px)" />;
   const [overlay, setOverlay] = useState(<OverlayOne />);
   return (
-    <>
+    <Box height="100%">
       <Flex flex="1" borderRadius="md" paddingBottom={10}>
         <Card
-          maxW={isLargeScreen ? "xs" : "sm"}
           onClick={() => {
             setOverlay(<OverlayOne />);
             onOpen();
           }}
           cursor="pointer"
+          height="100%"
         >
           <CardBody>
             <Image src={ThinkAboutIt} borderRadius="lg" />
@@ -200,7 +201,7 @@ const MoonTechnologies = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </Box>
   );
 };
 

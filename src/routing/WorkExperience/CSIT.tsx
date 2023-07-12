@@ -1,9 +1,9 @@
 import {
+  Box,
   Button,
   Card,
   CardBody,
   Divider,
-  Flex,
   HStack,
   Heading,
   Image,
@@ -21,10 +21,10 @@ import {
   useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
-import CSITInternshipPic from "../../assets/CSITInternship.jpg";
-import CSITInternshipTags from "./CSITInternshipTags";
-import CSITModalPic from "../../assets/CSITModalPic.jpg";
 import { useState } from "react";
+import CSITInternshipPic from "../../assets/CSITInternship.jpg";
+import CSITModalPic from "../../assets/CSITModalPic.jpg";
+import CSITInternshipTags from "./CSITInternshipTags";
 
 const CSIT = () => {
   const isLargeScreen = useBreakpointValue({
@@ -66,9 +66,8 @@ const CSIT = () => {
 
   return (
     <>
-      <Flex flex="1" borderRadius="md" paddingBottom={10}>
+      <Box borderRadius="md" paddingBottom={10}>
         <Card
-          maxW={isLargeScreen ? "xs" : "sm"}
           onClick={() => {
             setOverlay(<OverlayOne />);
             onOpen();
@@ -129,7 +128,7 @@ const CSIT = () => {
             </HStack>
           </CardBody>
         </Card>
-      </Flex>
+      </Box>
 
       <Modal
         isOpen={isOpen}

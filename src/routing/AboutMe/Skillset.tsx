@@ -364,6 +364,25 @@ const Skillset = () => {
       >
         Bootstrap
       </Tag>
+      <Tag
+        size={{
+          base: "md",
+          sm: "md",
+          md: "md",
+          lg: "lg",
+          xl: "lg",
+          "2xl": "lg",
+        }}
+        variant="solid"
+        color="black"
+        marginRight={{ base: 2, sm: 2, md: 3, lg: 5, xl: 5, "2xl": 5 }}
+        marginY={{ base: 1, sm: 1, md: 1, lg: 2, xl: 3 }}
+        bgColor="purple.300"
+        fontWeight="semibold"
+        fontSize={{ md: "md", lg: "lg", xl: "xl", "2xl": "2xl" }}
+      >
+        Chakra UI
+      </Tag>
     </Box>
   );
 };
