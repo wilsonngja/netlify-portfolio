@@ -11,7 +11,7 @@ const HeadingText = () => {
             md: "3xl",
             lg: "2xl",
             xl: "3xl",
-            "2xl": "3xl",
+            "2xl": "4xl",
           }}
           fontFamily="monospace"
           letterSpacing="-0.05em"
@@ -25,7 +25,7 @@ const HeadingText = () => {
             md: "3xl",
             lg: "2xl",
             xl: "3xl",
-            "2xl": "3xl",
+            "2xl": "4xl",
           }}
           color="red.300"
           fontFamily="monospace"

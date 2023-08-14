@@ -64,7 +64,7 @@ const IntroductionText = () => {
 
   const introduction = [
     " wilson_ng",
-    " a_bci_engineering_intern",
+    " a_final_year_student",
     " a_table_tennis_player",
     " a_fullstack_developer",
     " craving_pi_pa_gao",
