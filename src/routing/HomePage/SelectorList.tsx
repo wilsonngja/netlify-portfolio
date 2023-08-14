@@ -72,7 +72,7 @@ const SelectorList = () => {
         <Link to={item}>
           <ListItem
             key={item}
-            paddingY={3}
+            paddingY={2}
             marginY={2}
             color={
               items[count] === item

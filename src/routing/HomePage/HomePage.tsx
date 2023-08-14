@@ -97,7 +97,7 @@ function HomePage() {
         >
           <Image
             src={logo}
-            boxSize={isLargeScreen ? "200px" : isXLScreen ? "225px" : "280px"}
+            boxSize={isLargeScreen ? "200px" : isXLScreen ? "210px" : "280px"}
             borderRadius="full"
           />
         </GridItem>
