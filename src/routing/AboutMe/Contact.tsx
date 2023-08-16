@@ -27,7 +27,7 @@ const Contact = () => {
 
   const handleDownload = () => {
     const fileUrl =
-      "https://drive.google.com/uc?export=download&id=1_2WUzJwCBIUJrQ_u_3joDPpwdRP-MvKX";
+      "https://drive.google.com/uc?export=download&id=1j_lP9WGqLGNoy0EYMKY-HUGKec7LiesW";
 
     const link = document.createElement("a");
     link.href = fileUrl;
