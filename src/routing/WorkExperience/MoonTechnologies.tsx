@@ -24,7 +24,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import LoremIpsum from "react-lorem-ipsum";
-import ThinkAboutIt from "../../assets/Roll-Safe-Think-About-It.jpg";
+import ThinkAboutIt from "../../assets/MoonInternshipPhoto.jpg";
 import MoonInternshipTag from "./MoonInternshipTag";
 
 const MoonTechnologies = () => {
@@ -107,8 +107,11 @@ const MoonTechnologies = () => {
                     fontSize="0.95rem"
                     letterSpacing="-0.005rem"
                   >
-                    This internship is still in progress, please stay tune for
-                    more updates.
+                    During the summer of 2023, I've done my internship with Moon
+                    Technologies as an BCI Engineering Intern. Through this
+                    internship, I was given the opportunity to experience with
+                    several BCI technologies and able to harness my engineering
+                    skill.
                   </Text>
                 </>
               )}
@@ -191,7 +194,18 @@ const MoonTechnologies = () => {
             }}
             letterSpacing="-0.005rem"
           >
-            <LoremIpsum />
+            This internship was done during the 3 month Summer Holiday in 2023.
+            As a BCI Engineering Intern, I was task to perform test on a ECG
+            sensor and identify the similarities when doing signal processing.
+            After acquiring the patterns in an ECG sensor, I proceeded to
+            acquire some of the signals using a dedicated EEG sensor. Through
+            various permutations, my team and I identified the configuration
+            that renders the best results. We proceeded to collect some of the
+            data on Arduino Nano before moving towards processing the signals.
+            Some validations has also been made after the signal processing by
+            performing testing of being in relaxed and concentrated state. After
+            the result was proven to be replicable, my partner and I proceeded
+            to process and acquire the signal in real time.
           </ModalBody>
 
           <ModalFooter>
