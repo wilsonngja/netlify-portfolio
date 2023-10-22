@@ -23,7 +23,6 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import LoremIpsum from "react-lorem-ipsum";
 import ThinkAboutIt from "../../assets/MoonInternshipPhoto.jpg";
 import MoonInternshipTag from "./MoonInternshipTag";
 
